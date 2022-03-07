@@ -7,9 +7,6 @@ import "./styles/main.scss";
 
 function App() {
  
-
-  
-
   return (
     <React.Fragment>
       <Router>
