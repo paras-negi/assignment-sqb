@@ -5,26 +5,8 @@ import { withContext } from "./context/Context";
 
 import "./styles/main.scss";
 
-// import Error from "./pages/Error";
-
-// const { cross } = icons;
-
-// {context: {isUserLogin}}
-
 function App() {
-  // const [showToast, toggleToast] = useState({ show: 0, msg: "" });
-
-  useEffect(() => {
-    window.handleToastMsg = handleToastMsg;
-  }, []);
-
-  const handleToastMsg = (show, msg, time = 3000) => {
-    toggleToast({ show, msg });
-
-    setTimeout(() => {
-      toggleToast({ show: false, msg: "" });
-    }, time);
-  };
+ 
 
   
 
@@ -48,17 +30,3 @@ function App() {
 
 export default withContext(App);
 
-// export const Snackbar = ({ show, msg, handleToastMsg }) => {
-//   if (!show) return null;
-//   return (
-//     <div id="snackbar" className="snack-bg show">
-//       {msg}
-//     </div>
-//   );
-// };
-
- {/* <Snackbar
-        show={showToast?.show}
-        msg={showToast?.msg}
-        handleToastMsg={handleToastMsg}
-      /> */}
