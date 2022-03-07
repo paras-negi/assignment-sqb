@@ -29,9 +29,9 @@ export default class Context extends Component {
     this.setState({ isUserLogin: bool, userInfo: obj });
   };
 
-  onUserLogout = async () => {
-    // const checkLogin = await Auth.logoutUser();
-    // this.updateLoginInfo(checkLogin, "");
+  onUserLogout = () => {
+    const checkLogin = Auth.logoutUser();
+    this.updateLoginInfo(false, { email: "", name: "", skills: "", id: "" });
   };
 
   render() {

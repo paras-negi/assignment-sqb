@@ -21,6 +21,8 @@ function MainLayout(props) {
     title = "Test",
     context: { isUserLogin },
     loginPage = false,
+
+    modal={show: false, loading: false, data: []}
   } = props;
 
 
@@ -47,7 +49,8 @@ function MainLayout(props) {
   return (
     <main className="main-body">
       <Header isLoginPage={loginPage}/>
-      {children} {footer ? <Footer /> : null} {/* <Modal/> */}
+      {children} {footer ? <Footer /> : null}
+      {modal?.show?  <Modal data={modal?.data} closeCallback={modal?.closeCallback}/> : null}
     </main>
   );
 }

@@ -79,9 +79,9 @@ function Login({context: {updateLoginInfo}}) {
 
   return (
     <MainLayout loading={false} footer={false} authRequired={false} loginPage>
-      <div className="">
+      <div className="bg-light" style={{minHeight: "100vh"}}>
         <div className="login">
-          <div className="container">
+          <div className="container ">
             <div className="login-container">
               <h2>Login</h2>
 

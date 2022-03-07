@@ -55,26 +55,10 @@ class auth {
   
 
   logoutUser = () => {
-    return Fetch("auth/logout", {}, { sendToken: true }).then((res) => {
-      if (res?.status === 401) {
-        window.handleToastMsg(true, "Something went wrong!");
+    localStorage.removeItem(localVar);
+    localStorage.removeItem("temp");
 
-        setTimeout(() => {
-          window.handleToastMsg(false, "");
-        }, 2000);
-
-        return true;
-      }
-
-      if (res.success) {
-        localStorage.removeItem("AUTH_TOKEN");
-        window.handleToastMsg(true, res?.message);
-        setTimeout(() => {
-          window.handleToastMsg(false, "");
-        }, 2000);
-        return false;
-      }
-    });
+    return true;
   };
 
   refreshToken = () => {

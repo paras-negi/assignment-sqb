@@ -14,6 +14,8 @@ export default class Home extends Component {
 
     jobListObj: { 1: [] },
     paginationArr: [],
+
+    modal: { show: false, loading: false, data: [] },
   };
 
   componentDidMount() {
@@ -30,7 +32,7 @@ export default class Home extends Component {
             tempArr.push(i + 1);
           }
 
-          let countPerPage = Math.round(limit / totalPages);
+          // let countPerPage = Math.round(limit / totalPages);
           // console.log(Math.round(totat_count / limit));
 
           this.setState({
@@ -69,15 +71,47 @@ export default class Home extends Component {
     });
   };
 
+  viewJobApplicants = (id) => {
+    this.setState({ modal: { ...this.state.modal, loading: true } });
+    Fetch(
+      `recruiters/jobs/${id}/candidates`,
+      {},
+      { method: "get", sendToken: true }
+    ).then((res) => {
+      if (res?.success) {
+        this.setState({
+          modal: { show: true, data: res?.data, loading: false },
+        });
+        return;
+      } else {
+        this.setState({
+          modal: { ...this.state.modal, show: true, loading: false },
+        });
+      }
+    });
+  };
 
+  closeModal = () => {
+    this.setState({ modal: { show: false, data: [] } });
+  };
 
   render() {
-    const { isLoading, jobListObj, page, paginationArr } = this.state;
+    const { isLoading, jobListObj, page, paginationArr, modal } = this.state;
 
     // console.log(jobListObj);
 
     return (
-      <MainLayout loading={isLoading} footer={false} authRequired>
+      <MainLayout
+        loading={isLoading}
+        footer={false}
+        authRequired
+        modal={{
+          show: modal?.show,
+          loading: modal?.loading,
+          data: modal?.data,
+          closeCallback: this.closeModal,
+        }}
+      >
         {/* job posting */}
         <div className="jobPosted bg-light">
           <div className="container ">
@@ -103,7 +137,7 @@ export default class Home extends Component {
                             {d.location}
                           </div>
 
-                          <button>View</button>
+                          <button onClick={()=>this.viewJobApplicants(d.id)}>View</button>
                         </div>
                       </div>
                     </li>
