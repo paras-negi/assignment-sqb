@@ -1,6 +1,5 @@
 import React, { Component, createContext } from "react";
 import Auth from "../common/Auth";
-import Fetch from "../common/Fetch";
 
 const MainContext = createContext();
 
@@ -30,7 +29,7 @@ export default class Context extends Component {
   };
 
   onUserLogout = () => {
-    const checkLogin = Auth.logoutUser();
+    Auth.logoutUser();
     this.updateLoginInfo(false, { email: "", name: "", skills: "", id: "" });
   };
 

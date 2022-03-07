@@ -1,12 +1,10 @@
 import React, { Component } from "react";
-import { Navigate} from "react-router-dom";
 import Link from "../common/Link"
 import MainLayout from "../layouts/MainLayout";
 
 import Card from "../components/Card";
 import icons from "../common/Images";
 
-import Button from "../common/Link";
 
 const { logo, home_main, location, home, cross } = icons;
 
@@ -21,7 +19,7 @@ export default class Home extends Component {
 
   render() {
     return (
-      <MainLayout loading={false} footer={true}>
+      <MainLayout loading={false} footer={true} authRequired={false}>
         <div className="">
           <section className="homeMain bg-dark">
             <section className=" home-top ">
@@ -33,7 +31,6 @@ export default class Home extends Component {
                     <span className="logo-blue">Jobs</span>
                   </h3>
                   {/* <img src={logo} alt="" /> */}
-
                   <div className="mt4">
                     {" "}
                     <Link href="/jobs" type="button" className="btn-blue f14">

@@ -1,16 +1,34 @@
-import React from "react";
+import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
-import icons, {static_images} from "../common/Images";
+
+import icons, { static_images } from "../common/Images";
 import { withContext } from "../context/Context";
 
-const { logo, home_main} = icons;
+const { logo, home_main } = icons;
 
-
-function Header({ context: { isUserLogin, userInfo }, isLoginPage }) {
+function Header({
+  context: { isUserLogin, userInfo, logoutUser },
+  isLoginPage,
+}) {
   const navigate = useNavigate();
 
-  const onClickLoginLogout = () => {
+  const [logoutWarn, setLogoutwarn] = useState(false);
+
+  const onClickLoginLogout = (_case) => {
+    if (_case === "logout") {
+      logoutUser();
+      setLogoutwarn(true);
+
+      setTimeout(() => {
+        setLogoutwarn(false);
+        navigate("/");
+      }, 5000);
+
+      return;
+    }
+
     navigate("/login");
+    return;
   };
 
   return (
@@ -27,15 +45,24 @@ function Header({ context: { isUserLogin, userInfo }, isLoginPage }) {
             <div className="header-right__logo">
               {isUserLogin ? (
                 <div className="profile">
-                  <div className="username flex align-center"><span>r</span> <img src={static_images?.dropdown}/></div>
+                  <div className="username flex align-center">
+                    <span>{userInfo?.name?.charAt(0)}</span>{" "}
+                    <img src={static_images?.dropdown} />
+                  </div>
+
                   <div className="headDropdown">
-                    {/* <a>Logout</a> */}
-                    <div className="logoutSuccess">
-                      <div className="text-right"><img src={static_images?.cross2}/></div>
-                      <h4>Logout</h4>
-                      <p>You have successfully logged out.</p>
+                    <a onClick={() => onClickLoginLogout("logout")}>Logout</a>
+
+                    {logoutWarn ? (
+                      <div className="logoutSuccess">
+                        <div className="text-right">
+                          <img src={static_images?.cross2} onClick={()=>setLogoutwarn(false)}/>
+                        </div>
+                        <h4>Logout</h4>
+                        <p>You have successfully logged out.</p>
                       </div>
-                    </div>
+                    ) : null}
+                  </div>
                 </div>
               ) : (
                 <button className="btn login-btn" onClick={onClickLoginLogout}>
