@@ -1,0 +1,87 @@
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    
+  
+    &-head {
+      border-bottom: 1px solid #d6d9df;
+      padding: 0 0 2rem;
+    }
+  }
+
+  .applicant {
+    & .modal-container {
+      max-width: 80rem;
+      background: var(--color-white-1);
+    }
+  
+    & h3 {
+      font-size: 1.7rem;
+      color: #303f60;
+      margin: 1.7rem 0;
+    }
+  
+    &-list {
+      background: #eeeff2 0% 0% no-repeat padding-box;
+      border-radius: 10px;
+      padding: 1rem;
+  
+      & ul {
+        margin: 0 -2rem;
+        max-height: 50rem;
+        overflow: auto;
+  
+        & li {
+          padding: 0 2rem 2rem;
+          width: 50%;
+        }
+      }
+  
+      &-item {
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border: 1px solid #303f6080;
+        border-radius: 5px;
+        font-size: 1.6rem;
+        padding: 2rem;
+  
+        & .letter {
+          background: #d9efff 0% 0% no-repeat padding-box;
+          border-radius: 25px;
+          text-transform: uppercase;
+          color: #303f60;
+          margin-right: 2rem;
+          opacity: 0.8;
+          font-size: 2.2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 5rem;
+          height: 5rem;
+        }
+  
+        & .name {
+          font-weight: 600;
+          margin: 0 0 1rem;
+        }
+  
+        & .email,
+        .skill p {
+          color: #303f60;
+          opacity: 0.8;
+        }
+  
+        & .skill {
+          margin: 2rem 0 0;
+  
+          &-title {
+            margin: 0 0 0.6rem;
+          }
+        }
+      }
+    }
+  }

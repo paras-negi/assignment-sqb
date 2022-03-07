@@ -1,0 +1,90 @@
+.jobPosted {
+  position: relative;
+  padding: 3rem 0;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 18rem;
+    background: transparent
+      linear-gradient(248deg, var(--text-gray-1) 0%, var(--bg-dark-blue1) 100%)
+      0% 0% no-repeat padding-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  & h1 {
+    color: #fff;
+    font-size: 2.5rem;
+  }
+
+  &-list {
+    margin: 0 -2rem;
+    & li {
+      padding: 2rem;
+      max-width: 25%;
+    }
+
+    &-item {
+      background: #fff;
+      box-shadow: 0px 3px 6px #557da526;
+      border-radius: 5px;
+      padding: 2rem;
+
+      min-width: 25.22rem;
+
+      & h3 {
+        font-size: 1.8rem;
+      }
+
+      & p {
+        color: #303f60;
+        opacity: 0.8;
+        margin: 1.2rem 0 3rem;
+        font-size: 1.6rem;
+      }
+
+      & .location {
+        font-size: 1.6rem;
+        & img {
+          margin-right: 0.5rem;
+        }
+      }
+
+      & button {
+        background: #43afff33 0% 0% no-repeat padding-box;
+        border-radius: 5px;
+        color: #303f60;
+        padding: 1rem 2rem;
+        border: none;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+
+
+.pagination{
+    justify-content: center;
+
+    &-inner{
+    }
+
+    &-count{
+        flex-basis: 30%;
+
+        & li{
+            padding: 1rem 1.5rem;
+            border: 1.5px solid #7A839A;
+            border-radius: .5rem;
+            color: #7A839A;
+            font-size: 1.3rem;
+        }
+
+        & .active{
+            background: #43AFFF33;
+        }
+        // flex: 1 90%;
+    }
+}

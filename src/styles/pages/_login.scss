@@ -1,0 +1,81 @@
+.login {
+    position: relative;
+    padding: 3rem 0;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 18rem;
+      background: transparent
+        linear-gradient(248deg, var(--text-gray-1) 0%, var(--bg-dark-blue1) 100%)
+        0% 0% no-repeat padding-box;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &-container {
+      background: #ffffff 0% 0% no-repeat padding-box;
+      box-shadow: 0px 30px 36px #557da526;
+      border-radius: 20px;
+      margin: auto;
+      max-width: 60rem;
+      width: 100%;
+      padding: 3rem;
+    }
+
+    & h2 {
+      color: #303f60;
+      font-size: 2.2rem;
+    }
+  
+    .form {
+      &-group {
+        margin-top: 2.5rem;
+      }
+  
+      &-control {
+        border: 1px solid #c6c6c6;
+        background: #fafafa;
+        padding: 1.5rem;
+        height: 4.5rem;
+        width: 100%;
+        border-radius: 6px;
+      }
+
+      .red-border{
+        border: 1px solid red;
+      }
+
+      & label {
+        display: flex;
+        color: #303f60;
+        font-size: 1.6rem;
+        justify-content: space-between;
+        margin: 0 0 0.7rem;
+  
+        & a {
+          color: #43afff;
+          text-decoration: none;
+        }
+      }
+  
+      & .btn-theme {
+        background: #43afff 0% 0% no-repeat padding-box;
+        border: 1px solid #43afff;
+        border-radius: 5px;
+        color: #fff !important;
+        padding: 1.2rem 5rem;
+        font-size: 1.6rem;
+        margin: 1.5rem 0 3rem;
+      }
+      & .text {
+        font-size: 1.6rem;
+        & a {
+          color: #43afff;
+        }
+      }
+    }
+
+
+  }

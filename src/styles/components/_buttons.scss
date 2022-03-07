@@ -1,0 +1,19 @@
+button {
+  cursor: pointer !important;
+
+  &:disabled {
+    cursor: not-allowed !important;
+  }
+}
+
+.btn {
+  background: none;
+  border: none;
+
+  &-blue{
+    color: var(--color-white-1);
+    padding: 1.3rem 3rem;
+    background-color: var(--blue-main-1);
+    border-radius: .5rem;
+  }
+}

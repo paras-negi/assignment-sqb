@@ -1,0 +1,12 @@
+.main {
+  background: var(--dark);
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-height: 100vh;
+
+  &-body {
+    width: 100%;
+    min-height: 100vh;
+  }
+}

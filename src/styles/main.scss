@@ -1,0 +1,23 @@
+@font-face {
+    font-family: Proxima Nova;
+    src: url(../font/Proxima/regular.otf);
+  }
+
+@import 'abstracts/mixins';
+
+@import 'base/base';
+@import 'base/utilities';
+
+@import 'components/layout';
+@import 'components/buttons';
+@import 'components/footer';
+@import 'components/header';
+@import 'components/card';
+@import 'components/modal';
+
+
+@import 'pages/home';
+@import 'pages/login';
+@import 'pages/jobs';
+
+

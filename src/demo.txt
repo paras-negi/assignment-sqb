@@ -1,0 +1,60 @@
+c_password: "abcd"
+dob: "22/05/1998"
+email: "negi.paras809@gmail.com"
+first_name: "Paras"
+last_name: "Negi"
+password: "abcd"
+phone: "9988224477"
+username: "negiparas09"
+
+
+email: "negi.paras809@gmail.com"
+password: "abcd"
+
+message: "User login successfully."
+success: true
+
+
+
+eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTY3NzA5ODJlMjIyMDVmOWYzM2Q5ODQwMzM5YWY0N2JjMmJiMGQ3MzY1ZDA2N2JlMzg1MDQ4ZWEzMjI4YzM4MWFjMGFmZjQzOTIwNzA4YTkiLCJpYXQiOjE2MzI1NjI0NTMuNjU4OTczLCJuYmYiOjE2MzI1NjI0NTMuNjU4OTksImV4cCI6MTY2NDA5ODQ1My41OTE4MzIsInN1YiI6IjE0Iiwic2NvcGVzIjpbXX0.cHf5OM_KO9pvYc1OxMy1Frg7zbnWXFHwHOUpmDj4IGUeV5AUguxQhfUBczAW5Gl8MznOSFaEu-wscdhzTyg8xbpBKDQEdDXhdHDU6ZiOYtupoatUBhTRf_vmAGSgsVvCzpDkHjDD7lKFHt9Tiwjd5xcsJBTkjlMxQWqp9KwtizJmusRUZ6YHZOgczca7qwlKDrG1O5PME34gf7_gmRhqgBqxA-jmBIM7FVw2gXgrUzJ1f0Nf1cr8TKrw1kNc5UIXjtUAgDPXpNoR-W_8RWD3WJ2nKx-gjTjlngjaL66ED5YZ9yF8ba2zu6VK772qyid3zButKm3-AjV1zliMVPVwwNoDuDm5gr4E1ZgY5TVv9P0ZRzpvnKl9FC2t1xTU83SjKSwhmMAkgZnisyfQmqo8ilDNydCx82mP6mr3HWVx6idRP-lnxVUEsNe6pcHOs7z9_713lPiBFzUyt6w3Fn5m-N7kimsb3XqswYEiqYAa7Zq74SmN_SsnNGIhEEf0OM_XzxaKIFzoA6a7vSFMuNUUlSqd8la91Mk8Do5CGKEgK9vcIP39CNC9M6rkwtT1UxDA0gYO1Hznxaexi0VlZf6nS5xPgNuKzECSq1cIpbfdSyg_D3_ICs6RAOZXeMRNtFpcAgiapQv0U2tUzmX9D0HNjpmAEcnRejZyUoS_TIVnuqI
+
+
+curl --location --request POST 'https://darksugar.avijhaofficial.com/api/auth/register/' \
+--form 'first_name="Avinash"' \
+--form 'last_name="Jha"' \
+--form 'username="avinashjha"' \
+--form 'email="avinash.jha@hestabit.in"' \
+--form 'phone="9560308382"' \
+--form 'dob="12/03/1990"' \
+--form 'password="Jha@0312."' \
+--form 'c_password="Jha@0312."'
+
+
+curl --location --request POST 'https://darksugar.avijhaofficial.com/api/auth/login/' \
+--form 'email="avinash.jha@hestabit.in"' \
+--form 'password="Jha@0312."'
+
+
+
+curl --location --request POST 'https://darksugar.avijhaofficial.com/api/auth/my-profile/' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiM2E0NWNlNWMwNThlNTZlYWUyZTU0Nzk4N2RjN2I2ZGY0YTVhZGUzMGYzYzIwZTY2YjdhNzY1MGYyYTg3YjlhM2NkYWVjMWQ0ZDg1MGQ3NDQiLCJpYXQiOjE2MzE5NjMyNTQuMzc4NjAzLCJuYmYiOjE2MzE5NjMyNTQuMzc4NjExLCJleHAiOjE2NjM0OTkyNTQuMzU3ODE5LCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.ahefPt18gP1UkOpFJl2c_7Yxx_aw2O2r59ljEDSyv9erkQYBCNMaeN85BHLEAO7HfuiGJmzeyE5yc4Q_RU3ArZXzMnbtfZcnR93WU6xIaqixj8OD4-uJ-DPF3pemmR-cYwS2_D-S9f5VEUxSMPND89sHpINxDBN07cF_BCS6xVSSiYHisyn5J3CFtOWz4EbaISP9A7Xx_zWhYmmT4foazPuIlJ_2mng8tgM_nWOL9G5DHFNwaYVqCzOqMMmMHtfqrdCM5L9F0E6FpodsE1DgfEKrNUeFhWlY2wjuvqVFfGqSw9A0WxDca1Q0hWI4YGEr3tfCcONtS__hPuKmVlLxtWq5JCj-s5l_z2FRADv3FnsEE2OQD762saUcCtxtjirgsbdXlkPubiaMW-74K1bMZbnytyLNgYAl5hPbpSPKXzDX_2IRsZlLZEvuLN2wKoDgM9Y3a5fgvTY-V_COb6aYAOQPLIboJjrNRbrxzrS-9fEMNalXAsds7TV7C8CFc0EEB2vSNTpwlCscnilE_pJYSBd4coPrevtVTMiJa-0fkpyYfGk2RELMd9jj8-DM4h5xn5gMFWUyWXOJ7kbukXHAaC-h6ByMHShBKYMjSloqLV6Ol0Gg8aWEeEid5KRdPFxTYTOm-OdJB3W7LlFEY4kxTXdjQRvoRDC5Y2Y8wjP5v88'
+
+
+
+curl --location --request POST 'https://darksugar.avijhaofficial.com/api/auth/change-password/' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiM2E0NWNlNWMwNThlNTZlYWUyZTU0Nzk4N2RjN2I2ZGY0YTVhZGUzMGYzYzIwZTY2YjdhNzY1MGYyYTg3YjlhM2NkYWVjMWQ0ZDg1MGQ3NDQiLCJpYXQiOjE2MzE5NjMyNTQuMzc4NjAzLCJuYmYiOjE2MzE5NjMyNTQuMzc4NjExLCJleHAiOjE2NjM0OTkyNTQuMzU3ODE5LCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.ahefPt18gP1UkOpFJl2c_7Yxx_aw2O2r59ljEDSyv9erkQYBCNMaeN85BHLEAO7HfuiGJmzeyE5yc4Q_RU3ArZXzMnbtfZcnR93WU6xIaqixj8OD4-uJ-DPF3pemmR-cYwS2_D-S9f5VEUxSMPND89sHpINxDBN07cF_BCS6xVSSiYHisyn5J3CFtOWz4EbaISP9A7Xx_zWhYmmT4foazPuIlJ_2mng8tgM_nWOL9G5DHFNwaYVqCzOqMMmMHtfqrdCM5L9F0E6FpodsE1DgfEKrNUeFhWlY2wjuvqVFfGqSw9A0WxDca1Q0hWI4YGEr3tfCcONtS__hPuKmVlLxtWq5JCj-s5l_z2FRADv3FnsEE2OQD762saUcCtxtjirgsbdXlkPubiaMW-74K1bMZbnytyLNgYAl5hPbpSPKXzDX_2IRsZlLZEvuLN2wKoDgM9Y3a5fgvTY-V_COb6aYAOQPLIboJjrNRbrxzrS-9fEMNalXAsds7TV7C8CFc0EEB2vSNTpwlCscnilE_pJYSBd4coPrevtVTMiJa-0fkpyYfGk2RELMd9jj8-DM4h5xn5gMFWUyWXOJ7kbukXHAaC-h6ByMHShBKYMjSloqLV6Ol0Gg8aWEeEid5KRdPFxTYTOm-OdJB3W7LlFEY4kxTXdjQRvoRDC5Y2Y8wjP5v88' \
+--form 'old_password="Jha@0312."' \
+--form 'new_password="Jha@0312"' \
+--form 'confirm_password="Jha@0312"'
+
+
+
+curl --location --request POST 'https://darksugar.avijhaofficial.com/api/auth/password/forgot/' \
+--form 'email="avinash.jha@hestabit.in"'
+
+
+curl --location --request POST 'https://darksugar.avijhaofficial.com/api/auth/password/reset?token=d67843a3842b80965c14cf612df637dedaad7d59461af7573375b89112e55d19&email=avinash.jha%40hestabit.in' \
+--form 'password="Jha@031290."' \
+--form 'password_confirmation="Jha@031290."'
