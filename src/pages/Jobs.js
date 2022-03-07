@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import MainLayout from "../layouts/MainLayout";
-import icons from "../common/Images";
+  import icons, {static_images} from "../common/Images";
 
-import Fetch from "../common/Fetch";
-import Button from "../common/Link";
+  import Fetch from "../common/Fetch";
+  import Button from "../common/Link";
 
-const { logo, home_main, location, home, cross, no_jobs } = icons;
+  const { logo, home_main, location, home, cross,  } = icons;
+  const {noJobs} = static_images;
 export default class Home extends Component {
   state = {
     isLoading: false,
@@ -98,8 +99,6 @@ export default class Home extends Component {
   render() {
     const { isLoading, jobListObj, page, paginationArr, modal } = this.state;
 
-    // console.log(jobListObj);
-
     return (
       <MainLayout
         loading={isLoading}
@@ -167,101 +166,15 @@ export default class Home extends Component {
                 </div>
               </React.Fragment>
             ) : (
-              <div>
-                {" "}
-                <div className="display-block">
-                  <img src={no_jobs} alt="" />
+              <div className="center noJobs">
+                <div className="">
+                  <img src={noJobs} alt=""/>
                 </div>{" "}
                 <p>Your posted jobs will show here!</p>
               </div>
             )}
           </div>
         </div>
-
-        {/*list items*/}
-
-        {/* <li>
-                  <div className="jobPosted-list-item">
-                    <h3>UI UX Designer</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                      do eiusmod tempor incididunt…
-                    </p>
-                    <div className="flex justify-space align-center">
-                      <div className="location flex align-center">
-                        <img src={location} />
-                        Gurgaon
-                      </div>
-                      <button>Apply</button>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="jobPosted-list-item">
-                    <h3>UI UX Designer</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                      do eiusmod tempor incididunt…
-                    </p>
-                    <div className="flex justify-space align-center">
-                      <div className="location flex align-center">
-                        <img src={location} />
-                        Gurgaon
-                      </div>
-                      <button>Apply</button>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="jobPosted-list-item">
-                    <h3>UI UX Designer</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                      do eiusmod tempor incididunt…
-                    </p>
-                    <div className="flex justify-space align-center">
-                      <div className="location flex align-center">
-                        <img src={location} />
-                        Gurgaon
-                      </div>
-                      <button>Apply</button>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="jobPosted-list-item">
-                    <h3>UI UX Designer</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                      do eiusmod tempor incididunt…
-                    </p>
-                    <div className="flex justify-space align-center">
-                      <div className="location flex align-center">
-                        <img src={location} />
-                        Gurgaon
-                      </div>
-                      <button>Apply</button>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="jobPosted-list-item">
-                    <h3>UI UX Designer</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                      do eiusmod tempor incididunt…
-                    </p>
-                    <div className="flex justify-space align-center">
-                      <div className="location flex align-center">
-                        <img src={location} />
-                        Gurgaon
-                      </div>
-                      <button>Apply</button>
-                    </div>
-                  </div>
-                </li> */}
-
-        {/* job posting end */}
       </MainLayout>
     );
   }

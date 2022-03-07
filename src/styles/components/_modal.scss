@@ -12,12 +12,31 @@
       border-bottom: 1px solid #d6d9df;
       padding: 0 0 2rem;
     }
+
+    &-bg{
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      background: transparent linear-gradient(232deg, #303F60 0%, #1A253C 100%) 0% 0% no-repeat padding-box;
+opacity: 0.5;
+    }
   }
 
   .applicant {
     & .modal-container {
       max-width: 80rem;
+      z-index: 100;
+      padding: 2rem;
+      border-radius: 10px;
+      min-width: 60rem;
+      margin: auto;
       background: var(--color-white-1);
+    }
+
+    & .noJobs{
+      padding: 5rem 0 ;
     }
   
     & h3 {

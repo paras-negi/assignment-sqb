@@ -4,6 +4,10 @@ import lighting from "../assets/lighting.png";
 import ztos from "../assets/ztos.png";
 import goldline from "../assets/goldline.png";
 
+import noJobs from "../assets/noJobs.png";
+import dropdown from "../assets/dropdown.png";
+import cross2 from "../assets/cross2.png";
+
 function importAll(r) {
     let imgObj = {}
     let a = r.keys().map(r);
@@ -26,5 +30,7 @@ export const static_images = {
     kanba,
     lighting,
     ztos,
-    goldline
+    goldline,
+    noJobs,
+    dropdown,cross2
 }

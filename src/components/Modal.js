@@ -1,7 +1,6 @@
 import React from "react";
-import icons from "../common/Images";
+import icons, {static_images} from "../common/Images";
 
-const {cross, no_jobs } = icons;
 
 export default function Modal({ data, closeCallback }) {
   return (
@@ -10,7 +9,7 @@ export default function Modal({ data, closeCallback }) {
       <div className="modal-container">
         <div className="modal-head flex align-center justify-space">
           <h2>Applicants for this job</h2>
-          <img onClick={closeCallback} src={cross} alt="" />
+          <img onClick={closeCallback} src={icons?.cross} alt="" />
         </div>
 
         <div className="">
@@ -19,7 +18,7 @@ export default function Modal({ data, closeCallback }) {
             {data?.length ? (
               <ul className="flex align-center flex-wrap ">
                 {data?.map((d, i) => (
-                  <li>
+                  <li key={i}>
                     <div className="applicant-list-item">
                       <div className="flex align-center">
                         <div className="letter">{d.name.charAt(0)}</div>
@@ -67,10 +66,11 @@ export default function Modal({ data, closeCallback }) {
                   </div>
                 </li> */}
               </ul>
-            ) : <div> <img src={no_jobs} alt=""/> <p>No applicants found</p></div>}
+            ) : <div className="noJobs center"> <img src={static_images?.noJobs} alt=""/> <p>No applicants found</p></div>}
           </div>
         </div>
       </div>
+      <div className="modal-bg" onClick={closeCallback}></div>
     </div>
     // </div>
   );

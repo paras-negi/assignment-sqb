@@ -16,10 +16,7 @@ function App() {
         <Routes>
           {pageRoutes.map((d, i) => (
             <Route key={i} path={d.path} element={d.comp} />
-
           ))}
-
-          <Route component={Error} />
         </Routes>
       </Router>
 
